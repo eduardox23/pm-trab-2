@@ -45,11 +45,10 @@ public class VooTest {
     public void testGetNumero() {
         System.out.println("getNumero");
         Voo instance = new Voo();
-        int expResult = 0;
+        instance.setNumero(1001);
+        int expResult = 1001;
         int result = instance.getNumero();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +57,10 @@ public class VooTest {
     @Test
     public void testSetNumero_int() {
         System.out.println("setNumero");
-        int numero = 0;
+        int numero = 1001;
         Voo instance = new Voo();
         instance.setNumero(numero);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(1001, instance.getNumero());
     }
 
     /**
@@ -71,11 +69,10 @@ public class VooTest {
     @Test
     public void testSetNumero_String() {
         System.out.println("setNumero");
-        String numero = "";
+        String numero = "1001";
         Voo instance = new Voo();
         instance.setNumero(numero);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(1001, instance.getNumero());
     }
 
     /**
@@ -85,11 +82,10 @@ public class VooTest {
     public void testGetDataAgendada() {
         System.out.println("getDataAgendada");
         Voo instance = new Voo();
-        DateTime expResult = null;
+        DateTime expResult = new DateTime("2015-06-22");
+        instance.setDataAgendada(expResult);
         DateTime result = instance.getDataAgendada();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -98,11 +94,10 @@ public class VooTest {
     @Test
     public void testSetDataAgendada_DateTime() {
         System.out.println("setDataAgendada");
-        DateTime dataAgendada = null;
+        DateTime dataAgendada = new DateTime("2015-06-22");
         Voo instance = new Voo();
         instance.setDataAgendada(dataAgendada);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(dataAgendada, instance.getDataAgendada());
     }
 
     /**
@@ -111,11 +106,11 @@ public class VooTest {
     @Test
     public void testSetDataAgendada_String() {
         System.out.println("setDataAgendada");
-        String dataAgendada = "";
+        String dataAgendada = "22/06/2015";
         Voo instance = new Voo();
         instance.setDataAgendada(dataAgendada);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        DateTime expResult = new DateTime("2015-06-22 00:00:00.00000000");
+        assertEquals(expResult, instance.getDataAgendada());
     }
 
     /**
@@ -125,11 +120,10 @@ public class VooTest {
     public void testGetDataChegada() {
         System.out.println("getDataChegada");
         Voo instance = new Voo();
-        DateTime expResult = null;
+        DateTime expResult = new DateTime("2015-06-23");
+        instance.setDataChegada(expResult);
         DateTime result = instance.getDataChegada();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -138,11 +132,10 @@ public class VooTest {
     @Test
     public void testSetDataChegada_DateTime() {
         System.out.println("setDataChegada");
-        DateTime dataChegada = null;
+        DateTime dataChegada = new DateTime("2015-06-23 01:15");
         Voo instance = new Voo();
         instance.setDataChegada(dataChegada);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(dataChegada, instance.getDataChegada());
     }
 
     /**
@@ -151,11 +144,11 @@ public class VooTest {
     @Test
     public void testSetDataChegada_String() {
         System.out.println("setDataChegada");
-        String dataChegada = "";
+        String dataChegada = "23/06/2015";
         Voo instance = new Voo();
         instance.setDataChegada(dataChegada);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        DateTime expResult = new DateTime("2015-06-23 00:00:00.00000000");
+        assertEquals(expResult, instance.getDataChegada());
     }
 
     /**
@@ -165,11 +158,10 @@ public class VooTest {
     public void testGetDataSaida() {
         System.out.println("getDataSaida");
         Voo instance = new Voo();
-        DateTime expResult = null;
+        DateTime expResult = new DateTime("2015-06-22");
+        instance.setDataSaida(expResult);
         DateTime result = instance.getDataSaida();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -178,11 +170,10 @@ public class VooTest {
     @Test
     public void testSetDataSaida_DateTime() {
         System.out.println("setDataSaida");
-        DateTime dataSaida = null;
+        DateTime dataSaida = new DateTime("2015-06-22");
         Voo instance = new Voo();
         instance.setDataSaida(dataSaida);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(dataSaida, instance.getDataSaida());
     }
 
     /**
@@ -191,11 +182,11 @@ public class VooTest {
     @Test
     public void testSetDataSaida_String() {
         System.out.println("setDataSaida");
-        String dataSaida = "";
+        String dataSaida = "22/06/2015";
         Voo instance = new Voo();
         instance.setDataSaida(dataSaida);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        DateTime expResult = new DateTime("2015-06-22 00:00:00.00000000");
+        assertEquals(expResult, instance.getDataSaida());
     }
 
     /**
@@ -205,11 +196,10 @@ public class VooTest {
     public void testGetOrigem() {
         System.out.println("getOrigem");
         Voo instance = new Voo();
-        String expResult = "";
+        instance.setOrigem("Manaus - AM");
+        String expResult = "Manaus - AM";
         String result = instance.getOrigem();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -218,11 +208,10 @@ public class VooTest {
     @Test
     public void testSetOrigem() {
         System.out.println("setOrigem");
-        String origem = "";
+        String origem = "Manaus - AM";
         Voo instance = new Voo();
         instance.setOrigem(origem);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Manaus - AM", instance.getOrigem());
     }
 
     /**
@@ -232,11 +221,10 @@ public class VooTest {
     public void testGetDestino() {
         System.out.println("getDestino");
         Voo instance = new Voo();
-        String expResult = "";
+        instance.setDestino("Manaus - AM");
+        String expResult = "Manaus - AM";
         String result = instance.getDestino();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -245,11 +233,10 @@ public class VooTest {
     @Test
     public void testSetDestino() {
         System.out.println("setDestino");
-        String destino = "";
+        String destino = "Manaus - AM";
         Voo instance = new Voo();
         instance.setDestino(destino);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Manaus - AM", instance.getDestino());
     }
 
     /**
@@ -259,11 +246,10 @@ public class VooTest {
     public void testGetContrato() {
         System.out.println("getContrato");
         Voo instance = new Voo();
-        Contrato expResult = null;
+        Contrato expResult = new Contrato();
+        instance.setContrato(expResult);
         Contrato result = instance.getContrato();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -272,11 +258,10 @@ public class VooTest {
     @Test
     public void testSetContrato() {
         System.out.println("setContrato");
-        Contrato contrato = null;
+        Contrato contrato = new Contrato();
         Voo instance = new Voo();
         instance.setContrato(contrato);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(contrato, instance.getContrato());
     }
 
     /**
@@ -286,11 +271,10 @@ public class VooTest {
     public void testGetPiloto() {
         System.out.println("getPiloto");
         Voo instance = new Voo();
-        Piloto expResult = null;
+        Piloto expResult = new Piloto();
+        instance.setPiloto(expResult);
         Piloto result = instance.getPiloto();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -299,11 +283,10 @@ public class VooTest {
     @Test
     public void testSetPiloto() {
         System.out.println("setPiloto");
-        Piloto piloto = null;
+        Piloto piloto = new Piloto();
         Voo instance = new Voo();
         instance.setPiloto(piloto);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(piloto, instance.getPiloto());
     }
 
     /**
@@ -313,11 +296,10 @@ public class VooTest {
     public void testGetVeiculo() {
         System.out.println("getVeiculo");
         Voo instance = new Voo();
-        Veiculo expResult = null;
+        Veiculo expResult = new Veiculo();
+        instance.setVeiculo(expResult);
         Veiculo result = instance.getVeiculo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -326,11 +308,10 @@ public class VooTest {
     @Test
     public void testSetVeiculo() {
         System.out.println("setVeiculo");
-        Veiculo veiculo = null;
+        Veiculo veiculo = new Veiculo();
         Voo instance = new Voo();
         instance.setVeiculo(veiculo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(veiculo, instance.getVeiculo());
     }
     
 }
