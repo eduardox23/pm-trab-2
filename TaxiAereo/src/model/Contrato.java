@@ -80,8 +80,7 @@ public class Contrato {
 
 	public void setDesconto(String desconto) {
 		Common.check( Common.isDecimal(desconto), String.format(Common.CAMPO_DECIMAL_INVALIDO, "desconto") );
-		
-		setValor( new BigDecimal(desconto) );
+		setDesconto( new BigDecimal(desconto) );
 	}
 
 	public Cliente getCliente() {
