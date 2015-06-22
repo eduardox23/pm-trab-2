@@ -46,11 +46,10 @@ public class ContratoTest {
     public void testGetProtocolo() {
         System.out.println("getProtocolo");
         Contrato instance = new Contrato();
-        int expResult = 0;
+        instance.setProtocolo("171");
+        int expResult = 171;
         int result = instance.getProtocolo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -59,11 +58,10 @@ public class ContratoTest {
     @Test
     public void testSetProtocolo_int() {
         System.out.println("setProtocolo");
-        int protocolo = 0;
+        int protocolo = 171;
         Contrato instance = new Contrato();
         instance.setProtocolo(protocolo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(protocolo, instance.getProtocolo());
     }
 
     /**
@@ -72,11 +70,10 @@ public class ContratoTest {
     @Test
     public void testSetProtocolo_String() {
         System.out.println("setProtocolo");
-        String protocolo = "";
+        String protocolo = "171";
         Contrato instance = new Contrato();
         instance.setProtocolo(protocolo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(171, instance.getProtocolo());
     }
 
     /**
@@ -86,11 +83,10 @@ public class ContratoTest {
     public void testGetValor() {
         System.out.println("getValor");
         Contrato instance = new Contrato();
-        BigDecimal expResult = null;
+        instance.setValor("15.10");
+        BigDecimal expResult = new BigDecimal("15.10");
         BigDecimal result = instance.getValor();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -99,11 +95,10 @@ public class ContratoTest {
     @Test
     public void testSetValor_BigDecimal() {
         System.out.println("setValor");
-        BigDecimal valor = null;
+        BigDecimal valor = new BigDecimal("15.10");
         Contrato instance = new Contrato();
         instance.setValor(valor);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(valor, instance.getValor());
     }
 
     /**
@@ -112,11 +107,12 @@ public class ContratoTest {
     @Test
     public void testSetValor_String() {
         System.out.println("setValor");
-        String valor = "";
+        String valor = "15.10";
         Contrato instance = new Contrato();
         instance.setValor(valor);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        BigDecimal expResult = new BigDecimal("15.10");
+        
+        assertEquals(expResult, instance.getValor());
     }
 
     /**
@@ -126,11 +122,10 @@ public class ContratoTest {
     public void testGetDataContrato() {
         System.out.println("getDataContrato");
         Contrato instance = new Contrato();
-        DateTime expResult = null;
+        DateTime expResult = new DateTime("2015-06-22");
+        instance.setDataContrato(expResult);
         DateTime result = instance.getDataContrato();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -139,11 +134,10 @@ public class ContratoTest {
     @Test
     public void testSetDataContrato_DateTime() {
         System.out.println("setDataContrato");
-        DateTime dataContrato = null;
+        DateTime dataContrato = new DateTime("2015-06-22");
         Contrato instance = new Contrato();
         instance.setDataContrato(dataContrato);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(dataContrato, instance.getDataContrato());
     }
 
     /**
@@ -152,11 +146,11 @@ public class ContratoTest {
     @Test
     public void testSetDataContrato_String() {
         System.out.println("setDataContrato");
-        String dataContrato = "";
+        String dataContrato = "22/06/2015";
         Contrato instance = new Contrato();
         instance.setDataContrato(dataContrato);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        DateTime expResult = new DateTime("2015-06-22 00:00:00.00000000");
+        assertEquals(expResult, instance.getDataContrato());
     }
 
     /**
@@ -166,11 +160,10 @@ public class ContratoTest {
     public void testGetDesconto() {
         System.out.println("getDesconto");
         Contrato instance = new Contrato();
-        BigDecimal expResult = null;
+        BigDecimal expResult = new BigDecimal("3.60");
+        instance.setDesconto(expResult);
         BigDecimal result = instance.getDesconto();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -179,11 +172,10 @@ public class ContratoTest {
     @Test
     public void testSetDesconto_BigDecimal() {
         System.out.println("setDesconto");
-        BigDecimal desconto = null;
+        BigDecimal desconto = new BigDecimal("3.60");
         Contrato instance = new Contrato();
         instance.setDesconto(desconto);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(desconto, instance.getDesconto());
     }
 
     /**
@@ -192,11 +184,11 @@ public class ContratoTest {
     @Test
     public void testSetDesconto_String() {
         System.out.println("setDesconto");
-        String desconto = "";
+        String desconto = "3.60";
         Contrato instance = new Contrato();
         instance.setDesconto(desconto);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        BigDecimal expResult = new BigDecimal("3.60");
+        assertEquals(expResult, instance.getDesconto());
     }
 
     /**
@@ -206,11 +198,10 @@ public class ContratoTest {
     public void testGetCliente() {
         System.out.println("getCliente");
         Contrato instance = new Contrato();
-        Cliente expResult = null;
+        Cliente expResult = new Cliente();
+        instance.setCliente(expResult);
         Cliente result = instance.getCliente();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -219,11 +210,10 @@ public class ContratoTest {
     @Test
     public void testSetCliente() {
         System.out.println("setCliente");
-        Cliente cliente = null;
+        Cliente cliente = new Cliente();
         Contrato instance = new Contrato();
         instance.setCliente(cliente);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(cliente, instance.getCliente());
     }
 
     /**
@@ -233,11 +223,10 @@ public class ContratoTest {
     public void testGetVendedor() {
         System.out.println("getVendedor");
         Contrato instance = new Contrato();
-        Vendedor expResult = null;
+        Vendedor expResult = new Vendedor();
+        instance.setVendedor(expResult);
         Vendedor result = instance.getVendedor();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -246,11 +235,10 @@ public class ContratoTest {
     @Test
     public void testSetVendedor() {
         System.out.println("setVendedor");
-        Vendedor vendedor = null;
+        Vendedor vendedor = new Vendedor();
         Contrato instance = new Contrato();
         instance.setVendedor(vendedor);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(vendedor, instance.getVendedor());
     }
 
     /**
@@ -260,11 +248,11 @@ public class ContratoTest {
     public void testToString() {
         System.out.println("toString");
         Contrato instance = new Contrato();
-        String expResult = "";
+        instance.setProtocolo("171");
+        instance.setDataContrato(new DateTime("2015-06-22"));
+        String expResult = "Nº Protoc: 171 (22/06/2015)";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
