@@ -44,11 +44,10 @@ public class PessoaTest {
     public void testGetCpf() {
         System.out.println("getCpf");
         Pessoa instance = new Pessoa();
-        String expResult = "";
+        instance.setCpf("55364574628");
+        String expResult = "55364574628";
         String result = instance.getCpf();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +57,10 @@ public class PessoaTest {
     public void testGetCpfAsLong() {
         System.out.println("getCpfAsLong");
         Pessoa instance = new Pessoa();
-        long expResult = 0L;
+        instance.setCpf("55364574628");
+        long expResult = 55364574628L;
         long result = instance.getCpfAsLong();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -71,11 +69,10 @@ public class PessoaTest {
     @Test
     public void testSetCpf() {
         System.out.println("setCpf");
-        String cpf = "";
+        String cpf = "55364574628";
         Pessoa instance = new Pessoa();
-        instance.setCpf(cpf);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setCpf("55364574628");
+        assertEquals(cpf, instance.getCpf());
     }
 
     /**
@@ -85,11 +82,10 @@ public class PessoaTest {
     public void testGetNome() {
         System.out.println("getNome");
         Pessoa instance = new Pessoa();
-        String expResult = "";
+        instance.setNome("João Pereira da Silva");
+        String expResult = "João Pereira da Silva";
         String result = instance.getNome();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -98,11 +94,10 @@ public class PessoaTest {
     @Test
     public void testSetNome() {
         System.out.println("setNome");
-        String nome = "";
+        String nome = "João Pereira da Silva";
         Pessoa instance = new Pessoa();
-        instance.setNome(nome);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setNome("João Pereira da Silva");
+        assertEquals(nome, instance.getNome());
     }
 
     /**
@@ -112,11 +107,10 @@ public class PessoaTest {
     public void testGetRg() {
         System.out.println("getRg");
         Pessoa instance = new Pessoa();
-        String expResult = "";
+        instance.setRg("177233340");
+        String expResult = "177233340";
         String result = instance.getRg();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -125,11 +119,10 @@ public class PessoaTest {
     @Test
     public void testSetRg() {
         System.out.println("setRg");
-        String Rg = "";
+        String Rg = "177233340";
         Pessoa instance = new Pessoa();
         instance.setRg(Rg);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(Rg, instance.getRg());
     }
 
     /**
@@ -139,11 +132,10 @@ public class PessoaTest {
     public void testGetLogradouro() {
         System.out.println("getLogradouro");
         Pessoa instance = new Pessoa();
-        String expResult = "";
+        instance.setLogradouro("Rua xpto");
+        String expResult = "Rua xpto";
         String result = instance.getLogradouro();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -152,11 +144,10 @@ public class PessoaTest {
     @Test
     public void testSetLogradouro() {
         System.out.println("setLogradouro");
-        String logradouro = "";
+        String logradouro = "Rua xpto";
         Pessoa instance = new Pessoa();
         instance.setLogradouro(logradouro);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(logradouro, instance.getLogradouro());
     }
 
     /**
@@ -166,11 +157,10 @@ public class PessoaTest {
     public void testGetNumCasa() {
         System.out.println("getNumCasa");
         Pessoa instance = new Pessoa();
-        int expResult = 0;
+        instance.setNumeroCasa(256);
+        int expResult = 256;
         int result = instance.getNumCasa();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -179,11 +169,10 @@ public class PessoaTest {
     @Test
     public void testSetNumeroCasa_int() {
         System.out.println("setNumeroCasa");
-        int numeroCasa = 0;
+        int numeroCasa = 256;
         Pessoa instance = new Pessoa();
         instance.setNumeroCasa(numeroCasa);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(numeroCasa, instance.getNumCasa());
     }
 
     /**
@@ -192,11 +181,10 @@ public class PessoaTest {
     @Test
     public void testSetNumeroCasa_String() {
         System.out.println("setNumeroCasa");
-        String numeroCasa = "";
+        String numeroCasa = "256";
         Pessoa instance = new Pessoa();
         instance.setNumeroCasa(numeroCasa);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(256, instance.getNumCasa());
     }
 
     /**
@@ -206,11 +194,10 @@ public class PessoaTest {
     public void testGetCep() {
         System.out.println("getCep");
         Pessoa instance = new Pessoa();
-        int expResult = 0;
+        instance.setCep(22231010);
+        int expResult = 22231010;
         int result = instance.getCep();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -219,11 +206,10 @@ public class PessoaTest {
     @Test
     public void testSetCep_int() {
         System.out.println("setCep");
-        int cep = 0;
+        int cep = 22231010;
         Pessoa instance = new Pessoa();
         instance.setCep(cep);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(cep, instance.getCep());
     }
 
     /**
@@ -232,11 +218,10 @@ public class PessoaTest {
     @Test
     public void testSetCep_String() {
         System.out.println("setCep");
-        String cep = "";
+        String cep = "22231010";
         Pessoa instance = new Pessoa();
         instance.setCep(cep);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(22231010, instance.getCep());
     }
 
     /**
@@ -246,11 +231,11 @@ public class PessoaTest {
     public void testToString() {
         System.out.println("toString");
         Pessoa instance = new Pessoa();
-        String expResult = "";
+        instance.setNome("João Maria");
+        instance.setCpf("55364574628");
+        String expResult = "João Maria (CPF: 55364574628)";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

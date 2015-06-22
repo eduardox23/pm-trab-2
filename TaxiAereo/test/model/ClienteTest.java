@@ -45,11 +45,11 @@ public class ClienteTest {
     public void testGetDataCadastro() {
         System.out.println("getDataCadastro");
         Cliente instance = new Cliente();
-        DateTime expResult = null;
+        DateTime dataCadastro = new DateTime("1998-05-22 06:24:12");
+        instance.setDataCadastro(dataCadastro);
+        DateTime expResult = dataCadastro;
         DateTime result = instance.getDataCadastro();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +58,11 @@ public class ClienteTest {
     @Test
     public void testSetDataCadastro_DateTime() {
         System.out.println("setDataCadastro");
-        DateTime dataCadastro = null;
+        DateTime dataCadastro = new DateTime("2005-03-11 00:00:00");
         Cliente instance = new Cliente();
         instance.setDataCadastro(dataCadastro);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        assertEquals(dataCadastro, instance.getDataCadastro());
     }
 
     /**
@@ -71,11 +71,11 @@ public class ClienteTest {
     @Test
     public void testSetDataCadastro_String() {
         System.out.println("setDataCadastro");
-        String dataCadastro = "";
+        String dataCadastro = "22/06/2015";
         Cliente instance = new Cliente();
         instance.setDataCadastro(dataCadastro);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        DateTime expResult = new DateTime("2015-06-22 00:00:00.000000000");
+        assertEquals(expResult, instance.getDataCadastro());
     }
 
     /**
@@ -85,11 +85,10 @@ public class ClienteTest {
     public void testGetDataSaida() {
         System.out.println("getDataSaida");
         Cliente instance = new Cliente();
-        DateTime expResult = null;
+        instance.setDataSaida(new DateTime("2015-06-22 16:12:00"));
+        DateTime expResult = new DateTime("2015-06-22 16:12:00");
         DateTime result = instance.getDataSaida();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -98,11 +97,10 @@ public class ClienteTest {
     @Test
     public void testSetDataSaida() {
         System.out.println("setDataSaida");
-        DateTime dataSaida = null;
+        DateTime dataSaida = new DateTime("2015-06-22 16:15:00");
         Cliente instance = new Cliente();
         instance.setDataSaida(dataSaida);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(dataSaida, instance.getDataSaida());
     }
     
 }
