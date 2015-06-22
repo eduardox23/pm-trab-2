@@ -45,11 +45,10 @@ public class VeiculoTest {
     public void testGetAutonomia() {
         System.out.println("getAutonomia");
         Veiculo instance = new Veiculo();
-        int expResult = 0;
+        instance.setAutonomia(10);
+        int expResult = 10;
         int result = instance.getAutonomia();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +57,10 @@ public class VeiculoTest {
     @Test
     public void testSetAutonomia_int() {
         System.out.println("setAutonomia");
-        int autonomia = 0;
+        int autonomia = 10;
         Veiculo instance = new Veiculo();
         instance.setAutonomia(autonomia);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(10, instance.getAutonomia());
     }
 
     /**
@@ -71,11 +69,10 @@ public class VeiculoTest {
     @Test
     public void testSetAutonomia_String() {
         System.out.println("setAutonomia");
-        String autonomia = "";
+        String autonomia = "10";
         Veiculo instance = new Veiculo();
         instance.setAutonomia(autonomia);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(10, instance.getAutonomia());
     }
 
     /**
@@ -85,11 +82,10 @@ public class VeiculoTest {
     public void testGetCapacidade() {
         System.out.println("getCapacidade");
         Veiculo instance = new Veiculo();
-        int expResult = 0;
+        instance.setCapacidade(10);
+        int expResult = 10;
         int result = instance.getCapacidade();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -98,11 +94,10 @@ public class VeiculoTest {
     @Test
     public void testSetCapacidade_int() {
         System.out.println("setCapacidade");
-        int capacidade = 0;
+        int capacidade = 10;
         Veiculo instance = new Veiculo();
         instance.setCapacidade(capacidade);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(10, instance.getCapacidade());
     }
 
     /**
@@ -111,11 +106,10 @@ public class VeiculoTest {
     @Test
     public void testSetCapacidade_String() {
         System.out.println("setCapacidade");
-        String capacidade = "";
+        String capacidade = "10";
         Veiculo instance = new Veiculo();
         instance.setCapacidade(capacidade);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(10, instance.getCapacidade());
     }
 
     /**
@@ -125,11 +119,10 @@ public class VeiculoTest {
     public void testGetChassi() {
         System.out.println("getChassi");
         Veiculo instance = new Veiculo();
-        String expResult = "";
+        instance.setChassi("Chassi1");
+        String expResult = "Chassi1";
         String result = instance.getChassi();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -138,38 +131,10 @@ public class VeiculoTest {
     @Test
     public void testSetChassi() {
         System.out.println("setChassi");
-        String chassi = "";
+        String chassi = "Chassi1";
         Veiculo instance = new Veiculo();
         instance.setChassi(chassi);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getImagem method, of class Veiculo.
-     */
-    @Test
-    public void testGetImagem() {
-        System.out.println("getImagem");
-        Veiculo instance = new Veiculo();
-        ImageIcon expResult = null;
-        ImageIcon result = instance.getImagem();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setImagem method, of class Veiculo.
-     */
-    @Test
-    public void testSetImagem() {
-        System.out.println("setImagem");
-        ImageIcon imagem = null;
-        Veiculo instance = new Veiculo();
-        instance.setImagem(imagem);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Chassi1", instance.getChassi());
     }
 
     /**
@@ -179,11 +144,10 @@ public class VeiculoTest {
     public void testGetModelo() {
         System.out.println("getModelo");
         Veiculo instance = new Veiculo();
-        String expResult = "";
+        instance.setModelo("2001");
+        String expResult = "2001";
         String result = instance.getModelo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -192,11 +156,10 @@ public class VeiculoTest {
     @Test
     public void testSetModelo() {
         System.out.println("setModelo");
-        String modelo = "";
+        String modelo = "2001";
         Veiculo instance = new Veiculo();
         instance.setModelo(modelo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(modelo, instance.getModelo());
     }
 
     /**
@@ -206,11 +169,10 @@ public class VeiculoTest {
     public void testGetTipo() {
         System.out.println("getTipo");
         Veiculo instance = new Veiculo();
-        Veiculo.Tipo expResult = null;
+        instance.setTipo("Aviao");
+        Veiculo.Tipo expResult = Veiculo.Tipo.AVIAO;
         Veiculo.Tipo result = instance.getTipo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -220,11 +182,10 @@ public class VeiculoTest {
     public void testGetTipoDescr() {
         System.out.println("getTipoDescr");
         Veiculo instance = new Veiculo();
-        String expResult = "";
+        instance.setTipo(Veiculo.Tipo.AVIAO);
+        String expResult = "Aviao";
         String result = instance.getTipoDescr();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -233,11 +194,10 @@ public class VeiculoTest {
     @Test
     public void testSetTipo_VeiculoTipo() {
         System.out.println("setTipo");
-        Veiculo.Tipo tipo = null;
+        Veiculo.Tipo tipo = Veiculo.Tipo.AVIAO;
         Veiculo instance = new Veiculo();
         instance.setTipo(tipo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(Veiculo.Tipo.AVIAO, instance.getTipo());
     }
 
     /**
@@ -246,11 +206,10 @@ public class VeiculoTest {
     @Test
     public void testSetTipo_String() {
         System.out.println("setTipo");
-        String tipo = "";
+        String tipo = "Aviao";
         Veiculo instance = new Veiculo();
         instance.setTipo(tipo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(Veiculo.Tipo.AVIAO, instance.getTipo());
     }
 
     /**
@@ -260,11 +219,10 @@ public class VeiculoTest {
     public void testGetVelocidade() {
         System.out.println("getVelocidade");
         Veiculo instance = new Veiculo();
-        int expResult = 0;
+        instance.setVelocidade(100);
+        int expResult = 100;
         int result = instance.getVelocidade();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -273,11 +231,10 @@ public class VeiculoTest {
     @Test
     public void testSetVelocidade_int() {
         System.out.println("setVelocidade");
-        int velocidade = 0;
+        int velocidade = 100;
         Veiculo instance = new Veiculo();
         instance.setVelocidade(velocidade);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(100, instance.getVelocidade());
     }
 
     /**
@@ -286,11 +243,10 @@ public class VeiculoTest {
     @Test
     public void testSetVelocidade_String() {
         System.out.println("setVelocidade");
-        String velocidade = "";
+        String velocidade = "100";
         Veiculo instance = new Veiculo();
         instance.setVelocidade(velocidade);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(100, instance.getVelocidade());
     }
 
     /**
@@ -300,11 +256,13 @@ public class VeiculoTest {
     public void testToString() {
         System.out.println("toString");
         Veiculo instance = new Veiculo();
-        String expResult = "";
+        instance.setTipo("Aviao");
+        instance.setModelo("2001");
+        instance.setChassi("Chassi1");
+        
+        String expResult = "Aviao - 2001 (Chassi: Chassi1)";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

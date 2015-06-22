@@ -44,11 +44,10 @@ public class PilotoTest {
     public void testGetBreve() {
         System.out.println("getBreve");
         Piloto instance = new Piloto();
-        int expResult = 0;
+        instance.setBreve(250);
+        int expResult = 250;
         int result = instance.getBreve();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,11 +56,10 @@ public class PilotoTest {
     @Test
     public void testSetBreve_int() {
         System.out.println("setBreve");
-        int breve = 0;
+        int breve = 250;
         Piloto instance = new Piloto();
         instance.setBreve(breve);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(breve, instance.getBreve());
     }
 
     /**
@@ -70,11 +68,10 @@ public class PilotoTest {
     @Test
     public void testSetBreve_String() {
         System.out.println("setBreve");
-        String breve = "";
+        String breve = "250";
         Piloto instance = new Piloto();
         instance.setBreve(breve);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(250, instance.getBreve());
     }
 
     /**
@@ -84,11 +81,10 @@ public class PilotoTest {
     public void testToString() {
         System.out.println("toString");
         Piloto instance = new Piloto();
-        String expResult = "";
+        instance.setNome("Carlos Alberto");
+        instance.setBreve(250);
+        String expResult = "Carlos Alberto (Brevê: 250)";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
 }
