@@ -44,11 +44,10 @@ public class VendedorTest {
     public void testGetMatricula() {
         System.out.println("getMatricula");
         Vendedor instance = new Vendedor();
-        int expResult = 0;
+        instance.setMatricula(1001);
+        int expResult = 1001;
         int result = instance.getMatricula();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,11 +56,10 @@ public class VendedorTest {
     @Test
     public void testSetMatricula_int() {
         System.out.println("setMatricula");
-        int matricula = 0;
+        int matricula = 1001;
         Vendedor instance = new Vendedor();
         instance.setMatricula(matricula);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(1001, instance.getMatricula());
     }
 
     /**
@@ -70,11 +68,10 @@ public class VendedorTest {
     @Test
     public void testSetMatricula_String() {
         System.out.println("setMatricula");
-        String matricula = "";
+        String matricula = "1001";
         Vendedor instance = new Vendedor();
         instance.setMatricula(matricula);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(1001, instance.getMatricula());
     }
 
     /**
@@ -84,11 +81,11 @@ public class VendedorTest {
     public void testToString() {
         System.out.println("toString");
         Vendedor instance = new Vendedor();
-        String expResult = "";
+        instance.setNome("Sales Man");
+        instance.setMatricula(1001);
+        String expResult = "Sales Man (Matrícula: 1001)";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
