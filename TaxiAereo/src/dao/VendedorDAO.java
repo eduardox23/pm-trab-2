@@ -20,8 +20,8 @@ import model.Vendedor;
 public class VendedorDAO extends GenericDAO {
 
 	private static final String
-//		VENDEDOR_DELETE				 = "DELETE FROM vendedores WHERE matricula = ? ",
-		VENDEDOR_INSERT				 = "INSERT INTO vendedores VALUES (?, ?) ",
+		VENDEDOR_DELETE				 = "DELETE FROM vendedores WHERE cpf = ? ",
+		VENDEDOR_INSERT				 = "INSERT INTO vendedores (cpf) VALUES (?) ",
 		VENDEDOR_SELECT				 = "SELECT * FROM vendedores v INNER JOIN funcionarios f ON v.cpf=f.cpf INNER JOIN pessoas p ON v.cpf=p.cpf WHERE data_saida IS NULL",
 		VENDEDOR_SELECT_BY_MATRICULA = "SELECT * FROM vendedores v INNER JOIN funcionarios f ON v.cpf=f.cpf INNER JOIN pessoas p ON v.cpf=p.cpf WHERE data_saida IS NULL AND matricula = ?";
 
@@ -29,9 +29,9 @@ public class VendedorDAO extends GenericDAO {
 		save(VENDEDOR_INSERT, vendedor.getCpfAsLong());
 	}
 
-//	static public void remover(int matricula) throws SQLException {
-//		delete(VENDEDOR_DELETE, matricula);
-//	}
+	static public void remover(Vendedor vendedor) throws SQLException {
+		delete(VENDEDOR_DELETE, vendedor.getCpfAsLong());
+	}
 
 	static public List<Vendedor> findVendedores() throws SQLException {
 		

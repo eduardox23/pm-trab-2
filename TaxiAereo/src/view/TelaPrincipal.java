@@ -14,7 +14,7 @@ import view.voo.ViewerVoo;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class TelaPrincipal extends BaseView {
 

@@ -12,7 +12,7 @@ import model.Voo;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class VooController {
 	

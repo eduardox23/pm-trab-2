@@ -89,14 +89,6 @@ public class Veiculo {
 		this.chassi = chassi;
 	}
 
-	public ImageIcon getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(ImageIcon imagem) {
-		this.imagem = imagem;
-	}
-
 	public String getModelo() {
 		return modelo;
 	}

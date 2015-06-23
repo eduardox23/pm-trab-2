@@ -13,7 +13,7 @@ import model.Cliente;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class ClienteController {
 	

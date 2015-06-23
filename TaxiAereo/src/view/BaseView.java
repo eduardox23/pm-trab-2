@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class BaseView extends javax.swing.JFrame
 {

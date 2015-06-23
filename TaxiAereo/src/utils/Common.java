@@ -14,7 +14,7 @@ import java.util.TimeZone;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class Common {
 	

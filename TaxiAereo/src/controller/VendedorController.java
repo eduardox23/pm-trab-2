@@ -14,7 +14,7 @@ import model.Vendedor;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class VendedorController {
 	
@@ -23,9 +23,16 @@ public class VendedorController {
 		if( FuncionarioDAO.existe(vendedor.getCpf()) )
 			throw new UnsupportedOperationException("Já existe funcionário com este CPF!");
 
-		PessoaDAO.salvar(vendedor);
-		FuncionarioDAO.cadastrar(vendedor);
-		VendedorDAO.cadastrar(vendedor);
+                try {
+                    PessoaDAO.salvar(vendedor);
+                    FuncionarioDAO.cadastrar(vendedor);
+                    VendedorDAO.cadastrar(vendedor);
+                } catch (SQLException ex) {
+                    VendedorDAO.remover(vendedor);
+                    FuncionarioDAO.remover(vendedor.getCpf());
+                    PessoaDAO.remover(vendedor.getCpf());
+                    throw ex;
+                }
 	}
 
 	static public void alterar(Vendedor vendedor) throws SQLException {

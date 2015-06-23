@@ -12,7 +12,7 @@ import model.Contrato;
 /**
  *
  * @author
- * PedroLZ
+ * Edu3500
  */
 public class ContratoController {
 	
